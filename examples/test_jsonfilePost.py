@@ -25,7 +25,7 @@ def test_content_type():
 # Function to test if the response matches the expected JSON schema
 def test_response_json_schema():
     data = read_test_data()
-    response = requests.post(POST_URL, json=data)
+    response = requests.post(POST_URL, json=data[1])
     json_data = response.json()
     assert "id" in json_data, "Response does not contain 'id'"
     assert "userId" in json_data, "Response does not contain 'userId'"

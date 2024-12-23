@@ -1,0 +1,28 @@
+Request Type,Endpoint,Response Status,Result
+test_successful_delete_todo_request,Pass,DELETE request succeeded
+test_delete_todo_response_body_is_empty_json,Pass,Response body is an empty JSON object
+test_status_GET_COMMENTS60_code_is_200,Pass,Status code is 200
+test__GET_COMMENTS60_response_is_json,Pass,Response is in JSON format
+test_GET_COMMENTS60_all_comments_belong_to_post_1,Pass,All comments belong to postId=1
+test_response_time_is_less_than_400ms_GET_COMMENTS60,Fail,"Response time is too slow
+assert 1.248245 < 0.4
+ +  where 1.248245 = <built-in method total_seconds of datetime.timedelta object at 0x0000018895CFA970>()
+ +    where <built-in method total_seconds of datetime.timedelta object at 0x0000018895CFA970> = datetime.timedelta(seconds=1, microseconds=248245).total_seconds
+ +      where datetime.timedelta(seconds=1, microseconds=248245) = <Response [200]>.elapsed"
+test_keys_are_present_in_each_comment60,Pass,All required keys are present
+test_successful_post_request_POTS_post,Pass,POST request succeeded with status code 200 or 201
+test_POTS_postresponse_time_is_less_than_500ms,Pass,POST response time is less than 500ms
+test_POTS_post_title_matches_input,Pass,POST title matches input
+test_POTS_post_body_matches_input,Pass,POST body matches input
+test_POTS_post_userid_matches_input,Pass,POST userId matches input
+test_status_code_is_200_GET_post_by_id,Pass,Status code is 200
+test_post_id_matches_requested_id,Pass,Post ID matches the requested ID
+test_post_by_id_title_is_not_empty,Pass,Post title is not empty
+test_post_id_is_number_and_not_empty,Pass,Post ID is a valid number
+test_post_by_id_body_is_not_empty,Pass,Post body is not empty
+test_body_by_id_contains_expected_fields,Pass,Body contains all expected fields
+test_successful_put_post_request,Pass,PUT request successful
+test_put_post_title_is_updated_correctly,Pass,Title updated correctly
+test_put_post_body_is_updated_correctly,Pass,Body updated correctly
+test_put_post_userid_matches_input,Pass,UserId matches input
+test_put_post_id_matches_input,Pass,ID matches input
